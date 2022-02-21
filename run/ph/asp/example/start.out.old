@@ -1,0 +1,506 @@
+Charm++: standalone mode (not using charmrun)
+Charm++> Running in Multicore mode:  4 threads
+Charm++> Using recursive bisection (scheme 3) for topology aware partitions
+Converse/Charm++ Commit ID: v6.8.2-0-g26d4bd8-namd-charm-6.8.2-build-2018-Jan-11-30463
+Warning> Randomization of virtual memory (ASLR) is turned on in the kernel, thread migration may not work! Run 'echo 0 > /proc/sys/kernel/randomize_va_space' as root to disable it, or try running with '+isomalloc_sync'.
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 1 unique compute nodes (8-way SMP).
+Charm++> cpu topology info is gathered in 0.001 seconds.
+Info: NAMD Git-2019-10-07 for Linux-x86_64-multicore
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Comp. Chem. 26:1781-1802 (2005)
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 60800 for multicore-linux64-iccstatic
+Info: Built Mon Oct 7 02:04:21 CDT 2019 by jim on belfast.ks.uiuc.edu
+Info: 1 NAMD  Git-2019-10-07  Linux-x86_64-multicore  4    daya-Inspiron-5584  daya
+Info: Running on 4 processors, 1 nodes, 1 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.012589 s
+CkLoopLib is used in SMP with a simple dynamic scheduling (converse-level notification) but not using node-level queue
+Info: 265.195 MB of memory in use based on /proc/self/stat
+Info: Configuration file is start.namd
+Info: Working in the current directory /home/daya/Documentos/NORMALCOV/mem/comparison/pre/pre-ph/run/ph/asp/example
+PSFGEN 1.6.7 from NAMD Git-2019-10-07 for Linux-x86_64-multicore
+psfgen) reading topology file ../../toppar/top_cph36_prot.rtf
+
+psfgen) > CHARMM36 All-Hydrogen Topology File for Titratable Proteins <
+psfgen) >>>>>>>>>>>>>>>>>>>>>>>>>> Jun 2017 <<<<<<<<<<<<<<<<<<<<<<<<<<<
+psfgen)  Use this file for constant-pH MD with NAMD/psfgen.
+psfgen) 
+psfgen) Created by CHARMM version 36 1
+psfgen) cross-term entries present in topology definitions
+TCL: Reduction callback proc set to energyCallback
+TCL: namdcph) Setting up nonequilibrium alchemical switching.
+TCL: namdcph) clearing extraBondsFile 4.1/namdcph.sw.extrabonds
+TCL: Suspending until startup complete.
+Info: EXTENDED SYSTEM FILE   ../topology/Equilibration.restart.xsc
+Info: SIMULATION PARAMETERS:
+Info: TIMESTEP               2
+Info: NUMBER OF STEPS        0
+Info: STEPS PER CYCLE        20
+Info: PERIODIC CELL BASIS 1  31.5146 0 0
+Info: PERIODIC CELL BASIS 2  0 74.6764 0
+Info: PERIODIC CELL BASIS 3  0 0 90.167
+Info: PERIODIC CELL CENTER   -0.187979 -1.07554 9.95107
+Info: WRAPPING WATERS AROUND PERIODIC BOUNDARIES ON OUTPUT.
+Info: WRAPPING ALL CLUSTERS AROUND PERIODIC BOUNDARIES ON OUTPUT.
+Info: LOAD BALANCER  Centralized
+Info: LOAD BALANCING STRATEGY  New Load Balancers -- DEFAULT
+Info: LDB PERIOD             4000 steps
+Info: FIRST LDB TIMESTEP     100
+Info: LAST LDB TIMESTEP     -1
+Info: LDB BACKGROUND SCALING 1
+Info: HOM BACKGROUND SCALING 1
+Info: PME BACKGROUND SCALING 1
+Info: MIN ATOMS PER PATCH    40
+Info: VELOCITY FILE          ../topology/Equilibration.restart.vel
+Info: CENTER OF MASS MOVING INITIALLY? NO
+Info: DIELECTRIC             1
+Info: EXCLUDE                SCALED ONE-FOUR
+Info: 1-4 ELECTROSTATICS SCALED BY 1
+Info: MODIFIED 1-4 VDW PARAMETERS WILL BE USED
+Info: DCD FILENAME           4.1/ace_asp_nme_prod0.dcd
+Info: DCD FREQUENCY          5000
+Info: DCD FIRST STEP         5000
+Info: DCD FILE WILL CONTAIN UNIT CELL DATA
+Info: NO EXTENDED SYSTEM TRAJECTORY OUTPUT
+Info: NO VELOCITY DCD OUTPUT
+Info: NO FORCE DCD OUTPUT
+Info: OUTPUT FILENAME        4.1/ace_asp_nme_prod0
+Info: BINARY OUTPUT FILES WILL BE USED
+Info: NO RESTART FILE
+Info: SWITCHING ACTIVE
+Info: VDW FORCE SWITCHING ACTIVE
+Info: SWITCHING ON           10
+Info: SWITCHING OFF          12
+Info: PAIRLIST DISTANCE      14
+Info: PAIRLIST SHRINK RATE   0.01
+Info: PAIRLIST GROW RATE     0.01
+Info: PAIRLIST TRIGGER       0.3
+Info: PAIRLISTS PER CYCLE    2
+Info: PAIRLISTS ENABLED
+Info: MARGIN                 0
+Info: HYDROGEN GROUP CUTOFF  2.5
+Info: PATCH DIMENSION        16.5
+Info: ENERGY OUTPUT STEPS    5000
+Info: CROSSTERM ENERGY INCLUDED IN DIHEDRAL
+Info: TIMING OUTPUT STEPS    50000
+Info: THERMODYNAMIC INTEGRATION (TI) ON
+Info: TI LAMBDA VALUE     0
+Info: TI INTRA-ALCHEMICAL NON-BONDED INTERACTIONS WILL BE DECOUPLED
+Info: TI INTRA-ALCHEMICAL BONDED INTERACTIONS WILL BE DECOUPLED
+Info: TI VDW SHIFTING COEFFICIENT 0
+Info: TI ELEC. ACTIVE FOR ANNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 1
+Info: TI ELEC. ACTIVE FOR EXNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 1
+Info: TI VDW ACTIVE FOR ANNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 1
+Info: TI VDW ACTIVE FOR EXNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 1
+Info: TI BOND ACTIVE FOR ANNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 1
+Info: TI BOND ACTIVE FOR EXNIHILATED PARTICLES BETWEEN LAMBDA = 0 AND LAMBDA = 1
+Info: LANGEVIN DYNAMICS ACTIVE
+Info: LANGEVIN TEMPERATURE   298
+Info: LANGEVIN USING BBK INTEGRATOR
+Info: LANGEVIN DAMPING COEFFICIENT IS 1 INVERSE PS
+Info: LANGEVIN DYNAMICS NOT APPLIED TO HYDROGENS
+Info: PARTICLE MESH EWALD (PME) ACTIVE
+Info: PME TOLERANCE               1e-06
+Info: PME EWALD COEFFICIENT       0.257952
+Info: PME INTERPOLATION ORDER     4
+Info: PME GRID DIMENSIONS         32 80 96
+Info: PME MAXIMUM GRID SPACING    1
+Info: Attempting to read FFTW data from FFTW_NAMD_Git-2019-10-07_Linux-x86_64-multicore.txt
+Info: Optimizing 6 FFT steps.  1... 2... 3... 4... 5... 6...   Done.
+Info: Writing FFTW data to FFTW_NAMD_Git-2019-10-07_Linux-x86_64-multicore.txt
+Info: FULL ELECTROSTATIC EVALUATION FREQUENCY      1
+Info: USING VERLET I (r-RESPA) MTS SCHEME.
+Info: C1 SPLITTING OF LONG RANGE ELECTROSTATICS
+Info: PLACING ATOMS IN PATCHES BY HYDROGEN GROUPS
+Info: RIGID BONDS TO HYDROGEN : ALL
+Info:         ERROR TOLERANCE : 1e-08
+Info:          MAX ITERATIONS : 100
+Info: RIGID WATER USING SETTLE ALGORITHM
+Info: RANDOM NUMBER SEED     1645069213
+Info: USE HYDROGEN BONDS?    NO
+Info: COORDINATE PDB         ../topology/pre-ph_QwikMD.pdb
+Info: STRUCTURE FILE         ../topology/pre-ph_QwikMD.psf
+Info: PARAMETER file: CHARMM format! 
+Info: PARAMETERS             ../../toppar/par_all36_prot.prm
+Info: PARAMETERS             ../../toppar/par_cph36_prot.prm
+Info: PARAMETERS             ../../toppar/par_all36_solvent.prm
+Info: PARAMETERS             ../../toppar/toppar_water_ions_namd.str
+Info: PARAMETERS             ../../toppar/toppar_all36_carb_glycopeptide.str
+Info: PARAMETERS             ../../toppar/par_all36_na.prm
+Info: PARAMETERS             ../../toppar/par_all36_lipid.prm
+Info: PARAMETERS             ../../toppar/par_all36_cgenff.prm
+Info: PARAMETERS             ../../toppar/par_all36_carb.prm
+Info: USING ARITHMETIC MEAN TO COMBINE L-J SIGMA PARAMETERS
+Info: BINARY COORDINATES     ../topology/Equilibration.restart.coor
+Info: SKIPPING rtf SECTION IN STREAM FILE
+Info: SKIPPING rtf SECTION IN STREAM FILE
+Info: SUMMARY OF PARAMETERS:
+Info: 925 BONDS
+Info: 2696 ANGLES
+Info: 6608 DIHEDRAL
+Info: 195 IMPROPER
+Info: 6 CROSSTERM
+Info: 366 VDW
+Info: 6 VDW_PAIRS
+Info: 0 NBTHOLE_PAIRS
+Info: TIME FOR READING PSF FILE: 1.12201
+Info: READING EXTRA BONDS FILE 4.1/namdcph.sw.extrabonds
+Info: Reading pdb file ../topology/pre-ph_QwikMD.pdb
+Info: TIME FOR READING PDB FILE: 0.0204239
+Info: 
+Info: To read alchdata from file: coordinate pdb file (default)
+Info: To read alchflag data from column: 5
+Info: LONG-RANGE LJ: APPLYING ANALYTICAL CORRECTIONS TO ENERGY AND PRESSURE
+Info: LONG-RANGE LJ: AVERAGE A0 AND B0 COEFFICIENTS 109136 AND 95.1494
+Info: LONG-RANGE LJ: AVERAGE A1 AND B1 COEFFICIENTS 109136 AND 95.1494
+Info: ****************************
+Info: STRUCTURE SUMMARY:
+Info: 22182 ATOMS
+Info: 17371 BONDS
+Info: 19852 ANGLES
+Info: 21118 DIHEDRALS
+Info: 280 IMPROPERS
+Info: 54 CROSSTERMS
+Info: 0 EXCLUSIONS
+Info: 18976 RIGID BONDS
+Info: ALCH: 0 ATOMS TO DISAPPEAR IN FINAL STATE
+Info: ALCH: 0 ATOMS TO APPEAR IN FINAL STATE
+Info: 47570 DEGREES OF FREEDOM
+Info: 7938 HYDROGEN GROUPS
+Info: 4 ATOMS IN LARGEST HYDROGEN GROUP
+Info: 7938 MIGRATION GROUPS
+Info: 4 ATOMS IN LARGEST MIGRATION GROUP
+Info: TOTAL MASS = 132348 amu
+Info: TOTAL CHARGE = 3.22983e-06 e
+Info: MASS DENSITY = 1.0357 g/cm^3
+Info: ATOM DENSITY = 0.104534 atoms/A^3
+Info: *****************************
+Info: Reading from binary file ../topology/Equilibration.restart.coor
+Info: 
+Info: Entering startup at 1.34287 s, 289.027 MB of memory in use
+Info: Startup phase 0 took 4.48227e-05 s, 289.027 MB of memory in use
+Info: ADDED 58335 IMPLICIT EXCLUSIONS
+Info: Startup phase 1 took 0.00671101 s, 293.699 MB of memory in use
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 769 POINTS
+Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000325096 AT 11.9556
+Info: INCONSISTENCY IN SCOR TABLE ENERGY VS FORCE: 0.000324844 AT 11.9556
+Info: ABSOLUTE IMPRECISION IN VDWA TABLE ENERGY: 9.6778e-33 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWA TABLE ENERGY: 3.71539e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 9.34011e-27 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 2.98256e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
+Info: Startup phase 2 took 0.0021131 s, 297.5 MB of memory in use
+Info: Startup phase 3 took 3.38554e-05 s, 297.5 MB of memory in use
+Info: Startup phase 4 took 0.000161171 s, 297.5 MB of memory in use
+Info: Startup phase 5 took 2.00272e-05 s, 297.5 MB of memory in use
+Info: PATCH GRID IS 1 (PERIODIC) BY 4 (PERIODIC) BY 5 (PERIODIC)
+Info: PATCH GRID IS 1-AWAY BY 1-AWAY BY 1-AWAY
+Info: Reading from binary file ../topology/Equilibration.restart.vel
+Info: REMOVING COM VELOCITY -0.0110805 -0.0280778 -0.0288363
+Info: LARGEST PATCH (9) HAS 1211 ATOMS
+Info: TORUS A SIZE 1 USING 0
+Info: TORUS B SIZE 1 USING 0
+Info: TORUS C SIZE 1 USING 0
+Info: TORUS MINIMAL MESH SIZE IS 1 BY 1 BY 1
+Info: Placed 100% of base nodes on same physical node as patch
+Info: Startup phase 6 took 0.00306487 s, 301.98 MB of memory in use
+Info: PME using 4 and 4 processors for FFT and reciprocal sum.
+Info: PME GRID LOCATIONS: 0 1 2 3
+Info: PME TRANS LOCATIONS: 0 1 2 3
+Info: PME USING 1 GRID NODES AND 1 TRANS NODES
+Info: Optimizing 4 FFT steps.  1... 2... 3... 4...   Done.
+Info: Startup phase 7 took 0.000463963 s, 302.699 MB of memory in use
+Info: Startup phase 8 took 3.09944e-05 s, 302.699 MB of memory in use
+Info: Startup phase 9 took 2.09808e-05 s, 302.699 MB of memory in use
+Info: Startup phase 10 took 1.81198e-05 s, 302.699 MB of memory in use
+Info: Startup phase 11 took 5.6982e-05 s, 302.699 MB of memory in use
+LDB: Central LB being created...
+Info: Startup phase 12 took 4.3869e-05 s, 302.699 MB of memory in use
+Info: CREATING 420 COMPUTE OBJECTS
+Info: useSync: 0 useProxySync: 0
+Info: Startup phase 13 took 0.00121522 s, 302.699 MB of memory in use
+Info: Startup phase 14 took 3.98159e-05 s, 302.699 MB of memory in use
+Info: Startup phase 15 took 6.10352e-05 s, 303.199 MB of memory in use
+Info: Finished startup at 1.35697 s, 303.199 MB of memory in use
+
+TCL: Setting parameter alchLambdaFreq to 1
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 769 POINTS
+Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000325096 AT 11.9556
+Info: INCONSISTENCY IN SCOR TABLE ENERGY VS FORCE: 0.000324844 AT 11.9556
+Info: ABSOLUTE IMPRECISION IN VDWA TABLE ENERGY: 9.6778e-33 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWA TABLE ENERGY: 3.71539e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 9.34011e-27 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 2.98256e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
+TCL: Setting parameter alch to off
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 769 POINTS
+Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000325096 AT 11.9556
+Info: INCONSISTENCY IN SCOR TABLE ENERGY VS FORCE: 0.000324844 AT 11.9556
+Info: ABSOLUTE IMPRECISION IN VDWA TABLE ENERGY: 9.6778e-33 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWA TABLE ENERGY: 3.71539e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 9.34011e-27 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 2.98256e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
+TCL: namdcph) initializing constant pH PSF...
+psfgen) clearing structure, preserving topology and aliases
+psfgen) reading structure from psf file ../topology/pre-ph_QwikMD.psf
+psfgen) reading coordinates, insertion codes, and element symbols from pdb file ../topology/pre-ph_QwikMD.pdb
+psfgen) reading coordinates from namdbin file ../topology/Equilibration.restart.coor
+psfgen) reading velocities from velnamdbin file ../topology/Equilibration.restart.vel
+psfgen) applying patch GLUD to 1 residue(s)
+AP1:918 
+TCL: WARNING! Building new atom AP1:918:HE1 with unknown mass.
+TCL:          This may cause issues, for example, with mass repartitioning.
+TCL: WARNING! Building new atom AP1:918:HE2 with unknown mass.
+TCL:          This may cause issues, for example, with mass repartitioning.
+psfgen) applying patch LYS2 to 1 residue(s)
+AP1:921 
+psfgen) applying patch LYS3 to 1 residue(s)
+AP1:933 
+psfgen) applying patch ASPD to 1 residue(s)
+AP1:936 
+TCL: WARNING! Building new atom AP1:936:HD1 with unknown mass.
+TCL:          This may cause issues, for example, with mass repartitioning.
+TCL: WARNING! Building new atom AP1:936:HD2 with unknown mass.
+TCL:          This may cause issues, for example, with mass repartitioning.
+psfgen) applying patch LYS2 to 1 residue(s)
+AP1:947 
+psfgen) applying patch ASPD to 1 residue(s)
+AP1:950 
+TCL: WARNING! Building new atom AP1:950:HD1 with unknown mass.
+TCL:          This may cause issues, for example, with mass repartitioning.
+TCL: WARNING! Building new atom AP1:950:HD2 with unknown mass.
+TCL:          This may cause issues, for example, with mass repartitioning.
+psfgen) applying patch LYS2 to 1 residue(s)
+AP1:964 
+psfgen) Info: guessing coordinates for 6 atoms (0 non-hydrogen)
+TCL: cphpsfgen) creating new alchemical side chain for AP1:918:GLU
+psfgen) applying patch GLUH2 to 1 residue(s)
+AP1:918 
+TCL: cphpsfgen) merging alchemical sidechains for AP1:918:GLU
+TCL: cphpsfgen) creating new alchemical side chain for AP1:921:LYS
+psfgen) applying patch LYSHP to 1 residue(s)
+AP1:921 
+TCL: cphpsfgen) merging alchemical sidechains for AP1:921:LYS
+TCL: cphpsfgen) creating new alchemical side chain for AP1:933:LYS
+psfgen) applying patch LYSHP to 1 residue(s)
+AP1:933 
+TCL: cphpsfgen) merging alchemical sidechains for AP1:933:LYS
+TCL: cphpsfgen) creating new alchemical side chain for AP1:936:ASP
+psfgen) applying patch ASPH2 to 1 residue(s)
+AP1:936 
+TCL: cphpsfgen) merging alchemical sidechains for AP1:936:ASP
+TCL: cphpsfgen) creating new alchemical side chain for AP1:947:LYS
+psfgen) applying patch LYSHP to 1 residue(s)
+AP1:947 
+TCL: cphpsfgen) merging alchemical sidechains for AP1:947:LYS
+TCL: cphpsfgen) creating new alchemical side chain for AP1:950:ASP
+psfgen) applying patch ASPH2 to 1 residue(s)
+AP1:950 
+TCL: cphpsfgen) merging alchemical sidechains for AP1:950:ASP
+TCL: cphpsfgen) creating new alchemical side chain for AP1:964:LYS
+psfgen) applying patch LYSHP to 1 residue(s)
+AP1:964 
+TCL: cphpsfgen) merging alchemical sidechains for AP1:964:LYS
+psfgen) regenerating all angles
+psfgen) regenerating all dihedrals
+TCL: namdcph) ***************************************
+TCL: namdcph) CONSTANT pH MD ACTIVE
+TCL: namdcph) SYSTEM pH 4.1
+TCL: namdcph) CONSTANT pH CONFIGURATION FILE(S)
+TCL: namdcph) ../../toppar/conf_cph36_prot.json
+TCL: namdcph) NONEQUILIBRIUM SWITCH PARAMETERS:
+TCL: namdcph) ALCHEMICAL FORCE CONSTANT 100.0 kcal/mol-A^2
+TCL: namdcph) neMD/MC CRITERION TEMPERATURE 298.0
+TCL: namdcph) TEMPORARY FILE INFORMATION:
+TCL: namdcph) cpH TOPOLOGY FILE BASENAME 4.1/namdcph.md
+TCL: namdcph) neMD/MC TRAJECTORY BASENAME 4.1/namdcph.sw
+TCL: namdcph) ***************************************
+TCL: namdcph) ***************************************
+TCL: namdcph) TITRATABLE RESIDUE DEFINITIONS:
+TCL: namdcph) HIS ASP GLU CYS LYS
+TCL: namdcph) TITRATABLE SYSTEM SUMMARY:
+TCL: namdcph) 7 RESIDUE(S)
+TCL: namdcph) 18 PROTONATION SITE(S)
+TCL: namdcph) ***************************************
+TCL: namdcph) segid:resid:resname : state : pKai
+TCL: namdcph) AP1:918:GLU         :     2 : 4.4
+TCL: namdcph) AP1:921:LYS         :     P : 10.4
+TCL: namdcph) AP1:933:LYS         :     P : 10.4
+TCL: namdcph) AP1:936:ASP         :     2 : 4.0
+TCL: namdcph) AP1:947:LYS         :     P : 10.4
+TCL: namdcph) AP1:950:ASP         :     2 : 4.0
+TCL: namdcph) AP1:964:LYS         :     P : 10.4
+TCL: namdcph) ***************************************
+TCL: namdcph) *************************************************
+TCL: namdcph) CONSTANT pH neMD/MC MOVES:
+TCL: namdcph) MAX. ATTEMPTS PER CYCLE: 1
+TCL: namdcph) ONE RESIDUE MOVES
+TCL: namdcph) move label     : numsteps   weight
+TCL: namdcph) AP1:918:GLU    :     7500     1.00
+TCL: namdcph) AP1:921:LYS    :     7500     1.00
+TCL: namdcph) AP1:933:LYS    :     7500     1.00
+TCL: namdcph) AP1:936:ASP    :     7500     1.00
+TCL: namdcph) AP1:947:LYS    :     7500     1.00
+TCL: namdcph) AP1:950:ASP    :     7500     1.00
+TCL: namdcph) AP1:964:LYS    :     7500     1.00
+TCL: namdcph) *************************************************
+psfgen) Info: writing psf file 4.1/namdcph.md.psf
+psfgen) total of 22188 atoms
+psfgen) total of 17377 bonds
+psfgen) total of 19858 angles
+psfgen) total of 21130 dihedrals
+psfgen) total of 280 impropers
+psfgen) total of 0 explicit exclusions
+psfgen) total of 54 cross-terms
+psfgen) Info: psf file complete.
+psfgen) Info: writing pdb file 4.1/namdcph.md.pdb
+psfgen) Info: pdb file complete.
+psfgen) Info: writing namdbin file 4.1/namdcph.md.coor
+psfgen) Info: writing velnamdbin file 4.1/namdcph.md.vel
+psfgen) Info: namdbin file complete.
+psfgen) Info: velnamdbin file complete.
+TCL: namdcph) clearing extraBondsFile 4.1/namdcph.sw.extrabonds
+TCL: Reloading molecular structure from file 4.1/namdcph.md.psf and pdb file 4.1/namdcph.md.pdb
+Info: TIME FOR READING PSF FILE: 1.14389
+Info: READING EXTRA BONDS FILE 4.1/namdcph.sw.extrabonds
+Info: Reading pdb file 4.1/namdcph.md.pdb
+Info: TIME FOR READING PDB FILE: 0.0200059
+Info: 
+Info: LONG-RANGE LJ: APPLYING ANALYTICAL CORRECTIONS TO ENERGY AND PRESSURE
+Info: LONG-RANGE LJ: AVERAGE A AND B COEFFICIENTS 109127 AND 95.1385
+Info: ****************************
+Info: STRUCTURE SUMMARY:
+Info: 22188 ATOMS
+Info: 17377 BONDS
+Info: 19858 ANGLES
+Info: 21130 DIHEDRALS
+Info: 280 IMPROPERS
+Info: 54 CROSSTERMS
+Info: 0 EXCLUSIONS
+Info: 18982 RIGID BONDS
+Info: 47582 DEGREES OF FREEDOM
+Info: 7938 HYDROGEN GROUPS
+Info: 4 ATOMS IN LARGEST HYDROGEN GROUP
+Info: 7938 MIGRATION GROUPS
+Info: 4 ATOMS IN LARGEST MIGRATION GROUP
+Info: TOTAL MASS = 132354 amu
+Info: TOTAL CHARGE = 3 e
+Info: MASS DENSITY = 1.03575 g/cm^3
+Info: ATOM DENSITY = 0.104563 atoms/A^3
+Info: *****************************
+Info: ADDED 58359 IMPLICIT EXCLUSIONS
+Info: NONBONDED TABLE R-SQUARED SPACING: 0.0625
+Info: NONBONDED TABLE SIZE: 769 POINTS
+Info: INCONSISTENCY IN FAST TABLE ENERGY VS FORCE: 0.000325096 AT 11.9556
+Info: INCONSISTENCY IN SCOR TABLE ENERGY VS FORCE: 0.000324844 AT 11.9556
+Info: ABSOLUTE IMPRECISION IN VDWA TABLE ENERGY: 9.6778e-33 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWA TABLE ENERGY: 3.71539e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWA TABLE ENERGY VS FORCE: 0.0040507 AT 0.251946
+Info: ABSOLUTE IMPRECISION IN VDWB TABLE ENERGY: 9.34011e-27 AT 11.9974
+Info: RELATIVE IMPRECISION IN VDWB TABLE ENERGY: 2.98256e-17 AT 11.9974
+Info: INCONSISTENCY IN VDWB TABLE ENERGY VS FORCE: 0.00150189 AT 0.251946
+TCL: Reinitializing atom data from files with basename 4.1/namdcph.md
+Info: Reading from binary file 4.1/namdcph.md.coor
+Info: Reading from binary file 4.1/namdcph.md.vel
+Info: REMOVING COM VELOCITY -0.0131264 -0.03536 -0.0290088
+TCL: Running for 500 steps
+ETITLE:      TS           BOND          ANGLE          DIHED          IMPRP               ELECT            VDW       BOUNDARY           MISC        KINETIC               TOTAL           TEMP      POTENTIAL         TOTAL3        TEMPAVG            PRESSURE      GPRESSURE         VOLUME       PRESSAVG      GPRESSAVG
+
+ENERGY:       0       930.6338      4625.1331      3357.9460        64.4091         -60675.1169      1730.3068         0.0000         0.0000     14121.1300         -35845.5581       298.6876    -49966.6880    -35757.7604       298.6876            -97.3456       -89.0749    212198.2827       -97.3456       -89.0749
+
+LDB: ============= START OF LOAD BALANCING ============== 3.38849
+LDB: ============== END OF LOAD BALANCING =============== 3.38855
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 3.38916
+LDB: ============= START OF LOAD BALANCING ============== 8.10096
+LDB: Largest compute 29 load 0.375009 is 8.1% of average load 4.648727
+LDB: Average compute 0.042768 is 0.9% of average load 4.648727
+LDB: Partitioning computes with target load 0.464873
+LDB: Increased migratable compute count from 380 to 380
+LDB: Largest unpartitionable compute is 0.042760
+LDB: ============== END OF LOAD BALANCING =============== 8.10542
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 8.10603
+Info: Initial time: 4 CPUs 0.0542875 s/step 0.314164 days/ns 329.93 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 9.49567
+LDB: ============== END OF LOAD BALANCING =============== 9.49573
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 9.49633
+LDB: ============= START OF LOAD BALANCING ============== 15.2078
+LDB: Largest compute 25 load 0.448008 is 8.1% of average load 5.522488
+LDB: Average compute 0.051005 is 0.9% of average load 5.522488
+LDB: TIME 15.2081 LOAD: AVG 5.52249 MAX 5.71142  PROXIES: TOTAL 20 MAXPE 5 MAXPATCH 1 None MEM: 330.457 MB
+LDB: TIME 15.2141 LOAD: AVG 5.52249 MAX 5.64531  PROXIES: TOTAL 20 MAXPE 5 MAXPATCH 1 TorusLB MEM: 330.457 MB
+LDB: ============== END OF LOAD BALANCING =============== 15.2148
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 15.2158
+Info: Initial time: 4 CPUs 0.0710348 s/step 0.411081 days/ns 331.676 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 22.6168
+LDB: Largest compute 25 load 0.585212 is 8.1% of average load 7.195002
+LDB: Average compute 0.066657 is 0.9% of average load 7.195002
+LDB: TIME 22.6172 LOAD: AVG 7.195 MAX 7.30489  PROXIES: TOTAL 20 MAXPE 5 MAXPATCH 1 None MEM: 331.676 MB
+LDB: TIME 22.6173 LOAD: AVG 7.195 MAX 7.30489  PROXIES: TOTAL 20 MAXPE 5 MAXPATCH 1 RefineTorusLB MEM: 331.676 MB
+LDB: TIME 22.6173 LOAD: AVG 7.195 MAX 7.30489  PROXIES: TOTAL 20 MAXPE 5 MAXPATCH 1 RefineTorusLB MEM: 331.676 MB
+LDB: ============== END OF LOAD BALANCING =============== 22.618
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 22.6185
+Info: Initial time: 4 CPUs 0.0739621 s/step 0.428022 days/ns 331.676 MB memory
+LDB: ============= START OF LOAD BALANCING ============== 29.5561
+LDB: Largest compute 25 load 0.549850 is 8.1% of average load 6.827026
+LDB: Average compute 0.063192 is 0.9% of average load 6.827026
+LDB: TIME 29.5564 LOAD: AVG 6.82703 MAX 6.9168  PROXIES: TOTAL 20 MAXPE 5 MAXPATCH 1 None MEM: 331.676 MB
+LDB: TIME 29.5566 LOAD: AVG 6.82703 MAX 6.9168  PROXIES: TOTAL 20 MAXPE 5 MAXPATCH 1 RefineTorusLB MEM: 331.676 MB
+LDB: TIME 29.5566 LOAD: AVG 6.82703 MAX 6.9168  PROXIES: TOTAL 20 MAXPE 5 MAXPATCH 1 RefineTorusLB MEM: 331.676 MB
+LDB: ============== END OF LOAD BALANCING =============== 29.5572
+Info: useSync: 0 useProxySync: 0
+LDB: =============== DONE WITH MIGRATION ================ 29.5578
+Info: Benchmark time: 4 CPUs 0.0693939 s/step 0.401585 days/ns 331.676 MB memory
+Info: Benchmark time: 4 CPUs 0.0742789 s/step 0.429855 days/ns 331.676 MB memory
+TCL: namdcph) Proposal rejected.
+TCL: Running for 500 steps without repeating first step
+Info: Benchmark time: 4 CPUs 0.0717991 s/step 0.415504 days/ns 331.676 MB memory
+Info: Benchmark time: 4 CPUs 0.0729632 s/step 0.422241 days/ns 331.676 MB memory
+Info: Benchmark time: 4 CPUs 0.0707338 s/step 0.409339 days/ns 331.676 MB memory
+Info: Benchmark time: 4 CPUs 0.0831776 s/step 0.481352 days/ns 331.676 MB memory
+TCL: namdcph) Proposal rejected.
+TCL: Running for 500 steps without repeating first step
+TCL: namdcph) Proposal rejected.
+TCL: Running for 500 steps without repeating first step
+TCL: namdcph) Proposal rejected.
+TCL: Running for 500 steps without repeating first step
+TCL: namdcph) Proposal rejected.
+TCL: namdcph) *************************************************
+TCL: namdcph) CONSTANT pH MD STATISTICS:
+TCL: namdcph) move label                : attempts accept. rate
+TCL: namdcph) AP1:918:GLU               :        0         0.00
+TCL: namdcph) AP1:921:LYS               :        0         0.00
+TCL: namdcph) AP1:933:LYS               :        0         0.00
+TCL: namdcph) AP1:936:ASP               :        0         0.00
+TCL: namdcph) AP1:947:LYS               :        0         0.00
+TCL: namdcph) AP1:950:ASP               :        0         0.00
+TCL: namdcph) AP1:964:LYS               :        0         0.00
+TCL: namdcph) *************************************************
+TCL: Exiting due to exit command.
+WRITING EXTENDED SYSTEM TO OUTPUT FILE AT STEP 2500
+WRITING COORDINATES TO OUTPUT FILE AT STEP 2500
+COORDINATE DCD FILE 4.1/ace_asp_nme_prod0.dcd WAS NOT CREATED
+The last position output (seq=-2) takes 0.001 seconds, 333.812 MB of memory in use
+WRITING VELOCITIES TO OUTPUT FILE AT STEP 2500
+The last velocity output (seq=-2) takes 0.001 seconds, 333.812 MB of memory in use
+====================================================
+
+WallClock: 195.122345  CPUTime: 194.279190  Memory: 333.812500 MB
+[Partition 0][Node 0] End of program
